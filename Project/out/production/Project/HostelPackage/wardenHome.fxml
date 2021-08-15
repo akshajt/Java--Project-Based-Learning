@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="840.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HostelPackage.Controller">
+    <children>
+        <AnchorPane prefHeight="558.0" prefWidth="226.0" style="-fx-background-color: #002f82;">
+            <children>
+                <AnchorPane layoutX="-1.0" prefHeight="564.0" prefWidth="42.0" style="-fx-background-color: #84858c;">
+                    <effect>
+                        <DropShadow />
+                    </effect></AnchorPane>
+                <Button fx:id="btnLogout" layoutX="43.0" layoutY="513.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="46.0" prefWidth="185.0" style="-fx-background-color: #461c73;" text="Logout" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnWardenViewDatabase" layoutX="43.0" layoutY="93.0" mnemonicParsing="false" onAction="#handleWardenViewDatabase" prefHeight="46.0" prefWidth="185.0" style="-fx-background-color: #461c73;" text="Approve Leave" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnWardenOpenRC" layoutX="43.0" layoutY="164.0" mnemonicParsing="false" onAction="#wardenOpenRoomChangeRequest" prefHeight="46.0" prefWidth="185.0" style="-fx-background-color: #461c73;" text="Room Change" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnWardenOpenHKRequests" layoutX="43.0" layoutY="235.0" mnemonicParsing="false" onAction="#handleWardenOpenHKRequest" prefHeight="46.0" prefWidth="185.0" style="-fx-background-color: #461c73;" text="Housekeeping / Feedback" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
+        </AnchorPane>
+        <AnchorPane layoutX="242.0" prefHeight="564.0" prefWidth="589.0" style="-fx-background-color: 000000;">
+            <children>
+                <Button fx:id="closeButton" layoutX="556.0" layoutY="-1.0" mnemonicParsing="false" onAction="#handleClose" onMouseClicked="#handleClose" style="-fx-background-color: #000000;" text="X" textFill="WHITE">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Label layoutX="156.0" layoutY="37.0" text="Welcome, Warden" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="33.0" />
+                    </font>
+                </Label>
+            <Button fx:id="btnUserLoadHomeDetails" layoutX="230.0" layoutY="478.0" mnemonicParsing="false" onAction="#wardenHomeDetails" prefHeight="46.0" prefWidth="131.0" style="-fx-background-color: #461c73;" text="My DashBoard" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblLeaveCount" layoutX="56.0" layoutY="171.0" prefHeight="32.0" prefWidth="480.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblHKCount" layoutX="55.0" layoutY="250.0" prefHeight="32.0" prefWidth="480.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblRCCount" layoutX="55.0" layoutY="323.0" prefHeight="32.0" prefWidth="480.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFBCount" layoutX="55.0" layoutY="396.0" prefHeight="32.0" prefWidth="480.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            </children></AnchorPane>
+    </children>
+</AnchorPane>

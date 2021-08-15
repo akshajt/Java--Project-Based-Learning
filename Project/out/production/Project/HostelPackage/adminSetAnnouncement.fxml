@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="840.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HostelPackage.Controller">
+    <children>
+        <AnchorPane prefHeight="558.0" prefWidth="226.0" style="-fx-background-color: #002f82;">
+            <children>
+                <AnchorPane layoutX="-1.0" prefHeight="564.0" prefWidth="42.0" style="-fx-background-color: #84858c;">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <children>
+                        <Button fx:id="btnAdminBack" layoutX="1.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleAdminBack" prefHeight="14.0" prefWidth="42.0" style="-fx-background-color: #9c9b9a;" text="Back">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <effect>
+                                <InnerShadow height="9.08" radius="1.77" width="0.0" />
+                            </effect>
+                        </Button>
+                    </children></AnchorPane>
+                <Button fx:id="btnLogout" layoutX="43.0" layoutY="513.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="46.0" prefWidth="198.0" style="-fx-background-color: #461c73;" text="Logout" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnAddNewUser" layoutX="43.0" layoutY="66.0" mnemonicParsing="false" onAction="#handleOpenAddNewUser" prefHeight="46.0" prefWidth="198.0" style="-fx-background-color: #461c73;" text="Add Student" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="43.0" layoutY="142.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="198.0" style="-fx-background-color: #461c73;" text="Edit User" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnOpenDelete" layoutX="43.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleOpenDeleteUser" prefHeight="46.0" prefWidth="198.0" style="-fx-background-color: #461c73;" text="Delete User" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnViewDatabase" layoutX="43.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleOpenViewDatabase" prefHeight="46.0" prefWidth="198.0" style="-fx-background-color: #461c73;" text="View Database" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnOpenPaymentSearch" layoutX="43.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleOpenPaymentSearch" prefHeight="46.0" prefWidth="198.0" style="-fx-background-color: #461c73;" text="Manage Payment" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+            <Button layoutX="43.0" layoutY="436.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="198.0" style="-fx-background-color: #461c73;" text="Announcements" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
+        </AnchorPane>
+        <AnchorPane layoutX="242.0" prefHeight="564.0" prefWidth="589.0" style="-fx-background-color: 000000;">
+            <children>
+                <Label layoutX="213.0" layoutY="37.0" prefHeight="32.0" prefWidth="162.0" text="Announcements" textFill="WHITE">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Label>
+                <Button fx:id="closeButton" layoutX="556.0" layoutY="-1.0" mnemonicParsing="false" onAction="#handleClose" onMouseClicked="#handleClose" style="-fx-background-color: #000000;" text="X" textFill="WHITE">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnSetAnnouncement" layoutX="209.0" layoutY="454.0" mnemonicParsing="false" onAction="#handleSetAnnouncement" prefHeight="38.0" prefWidth="170.0" style="-fx-background-color: #461c73;" text="Set Announcement" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Label layoutX="62.0" layoutY="266.0" prefHeight="32.0" prefWidth="213.0" text="Enter Announcement" textFill="WHITE">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblEditUserSearchError" layoutX="191.0" layoutY="435.0" prefHeight="18.0" prefWidth="206.0" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+            <TextArea fx:id="txtAnnouncements" layoutX="328.0" layoutY="241.0" prefHeight="82.0" prefWidth="200.0" promptText="Maximum 225 Characters" />
+            <Label fx:id="lblAnnouncementError" layoutX="173.0" layoutY="434.0" prefHeight="20.0" prefWidth="242.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            </children></AnchorPane>
+    </children>
+</AnchorPane>

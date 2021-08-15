@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="840.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HostelPackage.WardenDatabaseController">
+    <children>
+        <AnchorPane prefHeight="558.0" prefWidth="226.0" style="-fx-background-color: #002f82;">
+            <children>
+                <AnchorPane layoutX="-1.0" prefHeight="564.0" prefWidth="42.0" style="-fx-background-color: #84858c;">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <children>
+                        <Button fx:id="btnWardenBack" layoutX="1.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleWardenBack" prefHeight="14.0" prefWidth="42.0" style="-fx-background-color: #9c9b9a;" text="Back">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <effect>
+                                <InnerShadow height="9.08" radius="1.77" width="0.0" />
+                            </effect>
+                        </Button>
+                        <Label fx:id="lblLoadDatabase" layoutX="4.0" layoutY="77.0" onMouseClicked="#handleWardenViewDatabase" text="⟳">
+                            <font>
+                                <Font name="System Bold" size="42.0" />
+                            </font>
+                        </Label>
+                    </children></AnchorPane>
+            <Button fx:id="btnLogout" layoutX="43.0" layoutY="513.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="46.0" prefWidth="185.0" style="-fx-background-color: #461c73;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="43.0" layoutY="93.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="185.0" style="-fx-background-color: #461c73;" text="Approve Leave" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
+        </AnchorPane>
+        <AnchorPane layoutX="242.0" prefHeight="564.0" prefWidth="589.0" style="-fx-background-color: 000000;">
+            <children>
+                <Button fx:id="closeButton" layoutX="563.0" layoutY="-4.0" mnemonicParsing="false" onAction="#handleClose" onMouseClicked="#handleClose" style="-fx-background-color: #000000;" text="X" textFill="WHITE">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Button>
+                <ScrollPane layoutY="27.0" prefHeight="466.0" prefWidth="596.0">
+                    <content>
+                        <AnchorPane>
+                            <children>
+                                <TableView fx:id="table" prefHeight="466.0" prefWidth="582.0">
+                                    <columns>
+                                        <TableColumn fx:id="col_prn" prefWidth="74.40003663301468" text="PRN" />
+                                        <TableColumn fx:id="col_FName" prefWidth="76.0" text="First Name" />
+                                        <TableColumn fx:id="col_LName" prefWidth="70.4000244140625" text="Last Name" />
+                                        <TableColumn fx:id="col_departureDate" prefWidth="100.00001525878906" text="Departure Date" />
+                                        <TableColumn fx:id="col_arrivalDate" prefWidth="81.60003662109375" text="Arrival Date" />
+                                        <TableColumn fx:id="col_leaveReason" prefWidth="85.60003662109375" text="Leave Reason" />
+                              <TableColumn fx:id="col_leaveApproved" prefWidth="85.60003662109375" text="Leave Approved" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            <Button fx:id="btnApproveLeave" layoutX="221.0" layoutY="519.0" mnemonicParsing="false" onAction="#approveLeaveFromTable" prefHeight="38.0" prefWidth="153.0" style="-fx-background-color: #461c73;" text="Approve Selected PRN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblLeaveApproveError" layoutX="158.0" layoutY="500.0" prefHeight="18.0" prefWidth="280.0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            </children></AnchorPane>
+    </children>
+</AnchorPane>
